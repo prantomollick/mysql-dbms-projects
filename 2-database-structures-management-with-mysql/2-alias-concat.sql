@@ -92,6 +92,26 @@ INSERT INTO Food_Orders_Delivery_Status (OrderID, Date_food_order_placed_with_su
 (10, '2023-02-10', '2023-02-15', 'Completed');
 
 
+-- Starters table
+CREATE TABLE Starters (
+    StarterName VARCHAR(255),
+    Cost DECIMAL(10, 2)
+);
+
+INSERT INTO Starters (StarterName, Cost) VALUES
+('Olives', 4.75),
+('Flatbread', 5.00),
+('Minestrone', 8.50),
+('Tomato bread', 8.50),
+('Falafel', 6.75),
+('Hummus', 5.00),
+('Bruschetta', 7.25),
+('Stuffed Mushrooms', 8.00),
+('Spring Rolls', 6.50),
+('Garlic Bread', 4.50);
+
+
+
 SELECT * FROM food_orders_delivery_status;
 
 --SQL alias
@@ -99,3 +119,11 @@ SELECT OrderID, Date_food_order_placed_with_supplier AS "Order Placed Date",
 Date_food_order_received_from_supplier as "Order Received Date", 
 Order_status from food_orders_delivery_status;
 
+
+--SQL concat two columns and alias
+SELECT CONCAT(OrderID, " ", Order_Status) as "Order Status" from food_orders_delivery_status;
+
+SELECT * FROM starters;
+SELECT * FROM courses;
+
+SELECT s.StarterName, s.Cost, c.CourseName, c.Price from courses AS c, starters as s where c.`Price` < 12 AND s.`Cost` < 5;

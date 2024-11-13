@@ -1,21 +1,20 @@
-# mysql-dbms-projects
+# MySQL-RDBMS-Projects | MySQL Logic Practice Repository
 
-# MySQL Logic Practice Repository
-
-Welcome to my SQL Practice Repository! This repository contains a variety of SQL files that cover essential SQL concepts, designed to aid in mastering database management and querying techniques. Each file contains example code, explanations, and exercises to reinforce SQL knowledge.
+Welcome to my SQL Practice + Projects Repository! This repository contains a variety of SQL files that cover essential SQL concepts, designed to aid in mastering database management and querying techniques. Each file contains example code, explanations, and exercises to reinforce SQL knowledge.
 
 ## Table of Contents
 
 1. **1-ecommerce**
 
-    - [1.1-ecommerce_schema.sql | 2-insert_data.sql | 3-simple-queries.sql](link_to_file)
+    - [1.1-ecommerce_schema.sql](link_to_file)
     - [1.2-insert_data.sql](link_to_file)
     - [1.3-simple-queries.sql](link_to_file)
 
 2. **2-database-structures-management-with-mysql**
 
     - [2.1- filtering-data.sql]()
-    - [2.2- filtering-data.sql]()
+    - [2.2- alias-concat.sql]()
+    - [2.3-joining-clause.sql]()
 
 3. **Database Design**
 
