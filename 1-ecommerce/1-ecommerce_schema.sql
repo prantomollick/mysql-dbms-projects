@@ -1,6 +1,10 @@
 -- Active: 1731438237227@@127.0.0.1@3306@ecommerce_db
+DROP DATABASE ecommerce_db;
+
 CREATE DATABASE ecommerce_db
     DEFAULT CHARACTER SET = 'utf8mb4';
+
+USE ecommerce_db;
 
 
 CREATE Table users(

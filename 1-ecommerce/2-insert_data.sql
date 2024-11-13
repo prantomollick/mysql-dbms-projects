@@ -64,9 +64,6 @@ INSERT INTO users (name, email, password, phone, address) VALUES
 ('Tina Green', 'tina.green@example.com', 'password_hash_20', '012-345-6789', '963 Hickory Circle, Sunnydale, ID');
 
 
-
-
-
 INSERT INTO product_reviews (user_id, product_id, rating, comment) VALUES
 (1, 2, 5, 'Fantastic smartphone with great features and battery life.'),
 (3, 1, 4, 'Good quality earbuds, but battery life could be better.'),
