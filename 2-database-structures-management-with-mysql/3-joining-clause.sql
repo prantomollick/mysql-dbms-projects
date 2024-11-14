@@ -113,3 +113,21 @@ CREATE TABLE LegacyClients (
 );
 
 
+INSERT INTO CurrentClients (ClientID, FullName, ContactNumber, Location) VALUES
+('CI01', 'Benjamin Clauss', 351854758, 'Graham County'),
+('CI02', 'Altay Ayhan', 351963258, 'Pinal County'),
+('CI03', 'Greta Galkina', 351784512, 'Santa Cruz County'),
+('CI04', 'Julia Marr', 351854125, 'Cochise County'),
+('CI05', 'Karl Murry', 351314658, 'Gila County');
+
+INSERT INTO LegacyClients (ClientID, FullName, ContactNumber, Location) VALUES
+('CI1', 'Takashi Ito', 351786345, 'Graham County'),
+('CI2', 'Jane Murphy', 351567243, 'Pinal County'),
+('CI3', 'Laurina Delgado', 351342597, 'Santa Cruz County'),
+('CI4', 'Mike Edwards', 351342509, 'Gila County'),
+('CI5', 'Julia Marr', 351208741, 'Cochise County');
+
+
+SELECT FullName, Location FROM CurrentClients
+UNION ALL
+select `FullName`, `Location` FROM legacyclients;

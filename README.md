@@ -6,15 +6,17 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
 
 1. **1-ecommerce**
 
-    - [1.1-ecommerce_schema.sql](link_to_file)
-    - [1.2-insert_data.sql](link_to_file)
-    - [1.3-simple-queries.sql](link_to_file)
+    - [1.1-ecommerce_schema.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/1-ecommerce/1-ecommerce_schema.sql)
+    - [1.2-insert_data.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/1-ecommerce/2-insert_data.sql)
+    - [1.3-simple-queries.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/1-ecommerce/3-simple-queries.sql)
 
 2. **2-database-structures-management-with-mysql**
 
-    - [2.1- filtering-data.sql]()
-    - [2.2- alias-concat.sql]()
-    - [2.3- joining-clause.sql]()
+    - [2.1- filtering-data.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/1-%20filtering-data.sql)
+    - [2.2- alias-concat.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/2-alias-concat.sql)
+    - [2.3- joining-clause.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/3-joining-clause.sql)
+    - [2.4- grouping-data.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/4-grouping-data.sql)
+    - [2.5- updating-Inserting-data.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/5-updating-Inserting-data.sql)
 
 3. **Database Design**
 
