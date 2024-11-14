@@ -1,6 +1,6 @@
 -- Active: 1731438237227@@127.0.0.1@3306@restaurant_management_db
 --------------------------------------------------
---Joining Tables
+--alias concat
 --------------------------------------------------
 
 DROP DATABASE restaurant_management_db;

@@ -1,129 +1,115 @@
--- Active: 1731438237227@@127.0.0.1@3306@restaurant_management_db
+-- Active: 1731438237227@@127.0.0.1@3306@clientordersdb
 --------------------------------------------------
 --Joining Tables
 --------------------------------------------------
 
-DROP DATABASE restaurant_management_db;
+DROP DATABASE ClientOrdersDB;
 
-CREATE DATABASE restaurant_management_db;
+-- Create the database
+CREATE DATABASE ClientOrdersDB;
 
-USE restaurant_management_db;
+USE ClientOrdersDB;
 
--- Bookings table
-CREATE TABLE Bookings (
-    BookingID INT PRIMARY KEY,
-    CustomerID INT,
-    BookingDate DATE,
-    NumberOfGuests INT,
-    SpecialRequests TEXT
-);
 
-INSERT INTO Bookings (BookingID, CustomerID, BookingDate, NumberOfGuests, SpecialRequests) VALUES
-(1, 101, '2023-01-01', 2, 'None'),
-(2, 102, '2023-01-02', 4, 'Vegetarian meal'),
-(3, 103, '2023-01-03', 3, 'Window seat'),
-(4, 104, '2023-01-04', 5, 'Birthday cake'),
-(5, 105, '2023-01-05', 2, 'None'),
-(6, 106, '2023-01-06', 6, 'Anniversary celebration'),
-(7, 107, '2023-01-07', 2, 'None'),
-(8, 108, '2023-01-08', 4, 'Gluten-free meal'),
-(9, 109, '2023-01-09', 3, 'None'),
-(10, 110, '2023-01-10', 2, 'None');
+-- Create the Clients table
+CREATE TABLE Clients ( 
+    ClientID VARCHAR(3) PRIMARY KEY, 
+    FullName VARCHAR(50), 
+    ContactNumber VARCHAR(10), 
+    Address VARCHAR(100)
+)
 
--- Courses table
-CREATE TABLE Courses (
-    CourseID INT PRIMARY KEY,
-    CourseName VARCHAR(255),
-    Description TEXT,
-    Price DECIMAL(10, 2)
-);
 
-INSERT INTO Courses (CourseID, CourseName, Description, Price) VALUES
-(1, 'Appetizer', 'Starter course', 5.99),
-(2, 'Main Course', 'Main dish', 15.99),
-(3, 'Dessert', 'Sweet dish', 6.99),
-(4, 'Beverage', 'Drink', 2.99),
-(5, 'Salad', 'Healthy salad', 7.99),
-(6, 'Soup', 'Warm soup', 4.99),
-(7, 'Pasta', 'Italian pasta', 12.99),
-(8, 'Pizza', 'Cheesy pizza', 10.99),
-(9, 'Burger', 'Juicy burger', 8.99),
-(10, 'Sandwich', 'Delicious sandwich', 6.99);
+-- Insert data into the Clients table
+INSERT INTO Clients (ClientID, FullName, ContactNumber, Address) VALUES
+('C1', 'Takashi Ito', '351786345', '724 Greenway Drive'),
+('C2', 'Jane Murphy', '351567243', '102 Sycamore Lane'),
+('C3', 'Laurina Delgado', '351342597', '291 Oak Wood Avenue'),
+('C4', 'Benjamin Clauss', '351342509', '831 Beechwood Terrace'),
+('C5', 'Altay Ayhan', '351208983', '755 Palm Tree Hills'),
+('C6', 'Greta Galkina', '351298755', '831 Beechwood Terrace');
 
--- Customers table
-CREATE TABLE Customers (
-    CustomerID INT PRIMARY KEY,
-    FirstName VARCHAR(255),
-    LastName VARCHAR(255),
-    Email VARCHAR(255),
-    PhoneNumber VARCHAR(20)
-);
-
-INSERT INTO Customers (CustomerID, FirstName, LastName, Email, PhoneNumber) VALUES
-(101, 'John', 'Doe', 'john.doe@example.com', '123-456-7890'),
-(102, 'Jane', 'Smith', 'jane.smith@example.com', '234-567-8901'),
-(103, 'Alice', 'Johnson', 'alice.johnson@example.com', '345-678-9012'),
-(104, 'Bob', 'Brown', 'bob.brown@example.com', '456-789-0123'),
-(105, 'Charlie', 'Davis', 'charlie.davis@example.com', '567-890-1234'),
-(106, 'David', 'Wilson', 'david.wilson@example.com', '678-901-2345'),
-(107, 'Eve', 'Miller', 'eve.miller@example.com', '789-012-3456'),
-(108, 'Frank', 'Taylor', 'frank.taylor@example.com', '890-123-4567'),
-(109, 'Grace', 'Anderson', 'grace.anderson@example.com', '901-234-5678'),
-(110, 'Hank', 'Thomas', 'hank.thomas@example.com', '012-345-6789');
-
--- Food_Orders_Delivery_Status table
-CREATE TABLE Food_Orders_Delivery_Status (
+-- Create the Orders table
+CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
-    Date_food_order_placed_with_supplier DATE,
-    Date_food_order_received_from_supplier DATE,
-    Order_status VARCHAR(255)
+    ClientID VARCHAR(3),
+    ProductID VARCHAR(2),
+    Quantity INT,
+    Cost DECIMAL(10, 2),
+    FOREIGN KEY (ClientID) REFERENCES Clients(ClientID)
 );
 
-INSERT INTO Food_Orders_Delivery_Status (OrderID, Date_food_order_placed_with_supplier, Date_food_order_received_from_supplier, Order_status) VALUES
-(1, '2023-02-01', '2023-02-05', 'Completed'),
-(2, '2023-02-02', '2023-02-06', 'Completed'),
-(3, '2023-02-03', '2023-02-07', 'Completed'),
-(4, '2023-02-04', NULL, 'In Progress'),
-(5, '2023-02-05', '2023-02-10', 'Completed'),
-(6, '2023-02-06', '2023-02-11', 'Completed'),
-(7, '2023-02-07', '2023-02-12', 'Completed'),
-(8, '2023-02-08', NULL, 'In Progress'),
-(9, '2023-02-09', '2023-02-14', 'Completed'),
-(10, '2023-02-10', '2023-02-15', 'Completed');
+-- Insert data into the Orders table
+INSERT INTO Orders (OrderID, ClientID, ProductID, Quantity, Cost) VALUES
+(1, 'C1', 'P1', 10, 500.00),
+(2, 'C2', 'P2', 5, 100.00),
+(3, 'C3', 'P3', 20, 800.00),
+(4, 'C4', 'P4', 15, 150.00),
+(5, 'C3', 'P3', 10, 450.00),
+(6, 'C1', 'P2', 5, 800.00),
+(7, 'C1', 'P4', 22, 1200.00),
+(8, 'C1', 'P1', 15, 150.00);
 
 
--- Starters table
-CREATE TABLE Starters (
-    StarterName VARCHAR(255),
-    Cost DECIMAL(10, 2)
+--Inner JOIN
+SELECT clients.`FullName` FROM clients INNER JOIN orders ON clients.`ClientID` = `Orders`.`ClientID`;
+
+SELECT clients.`ClientID`, clients.`FullName` AS "Full Name", clients.`ContactNumber` AS "Phone Number", orders.`ProductID` as "Prodduct Code",
+orders.`Quantity` as "Items Quantity", orders.`Cost` FROM clients INNER JOIN orders ON clients.`ClientID` = orders.`ClientID`;
+
+
+-- LEFT JOIN
+SELECT c.`ClientID` as "Client ID", c.`FullName` as 'Full Name', o.`OrderID` AS "ORDER ID", o.`Quantity`, o.`Cost`
+FROM clients AS c LEFT JOIN orders AS o ON c.`ClientID` = o.`ClientID`;
+
+
+SELECT c.`ClientID` as "Client ID", c.`FullName` AS 'Full Name', o.`OrderID` AS "ORDER ID", o.`Quantity`, o.`Cost`
+FROM clients as c RIGHT JOIN orders AS O ON c.`ClientID` = o.`ClientID`
+
+-- Creating the Employees table
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FullName VARCHAR(50),
+    JobTitle VARCHAR(50),
+    County VARCHAR(50),
+    LineManagerID INT
 );
 
-INSERT INTO Starters (StarterName, Cost) VALUES
-('Olives', 4.75),
-('Flatbread', 5.00),
-('Minestrone', 8.50),
-('Tomato bread', 8.50),
-('Falafel', 6.75),
-('Hummus', 5.00),
-('Bruschetta', 7.25),
-('Stuffed Mushrooms', 8.00),
-('Spring Rolls', 6.50),
-('Garlic Bread', 4.50);
+-- Inserting data into the Employees table
+INSERT INTO Employees (EmployeeID, FullName, JobTitle, County, LineManagerID) VALUES
+(1, 'Seamus Hogan', 'Manager', 'Pinal County', 3),
+(2, 'Thomas Eriksson', 'Assistant', 'Pinal County', 1),
+(3, 'Simon Tolo', 'Head Chef', 'Gila County', 3),
+(4, 'Francesca Soffia', 'Assistant', 'Cochise County', 1),
+(5, 'Emily Sierra', 'Accountant', 'Cochise County', 1),
+(6, 'Greta Galkina', 'Accountant', 'Cochise County', 3);
+
+-- Using a left join to get employees and their line managers
+SELECT e.FullName AS EmployeeName, e.JobTitle, e.County, m.FullName AS ManagerName
+FROM Employees e
+LEFT JOIN Employees m ON e.LineManagerID = m.EmployeeID;
+
+SELECT * FROM employees;
+
+--SELF JOIN
+SELECT e1.`FullName` AS "Line Manager", e2.FullName AS 'Employee' FROM employees AS e1 INNER JOIN
+employees AS e2 ON e1.`EmployeeID` = e2.`LineManagerID`;
+
+--UNION OPERATOR HOW TO WORK
+CREATE TABLE CurrentClients (
+    ClientID VARCHAR(5) NOT NULL,
+    FullName VARCHAR(50),
+    ContactNumber INT,
+    Location VARCHAR(50),
+    PRIMARY KEY (ClientID)
+);
+
+CREATE TABLE LegacyClients (
+    ClientID VARCHAR(5) NOT NULL,
+    FullName VARCHAR(50),
+    ContactNumber INT,
+    Location VARCHAR(50),
+    PRIMARY KEY (ClientID)
+);
 
 
-
-SELECT * FROM food_orders_delivery_status;
-
---SQL alias
-SELECT OrderID, Date_food_order_placed_with_supplier AS "Order Placed Date",
-Date_food_order_received_from_supplier as "Order Received Date", 
-Order_status from food_orders_delivery_status;
-
-
---SQL concat two columns and alias
-SELECT CONCAT(OrderID, " ", Order_Status) as "Order Status" from food_orders_delivery_status;
-
-SELECT * FROM starters;
-SELECT * FROM courses;
-
-SELECT s.StarterName, s.Cost, c.CourseName, c.Price from courses AS c, starters as s where c.`Price` < 12 AND s.`Cost` < 5;

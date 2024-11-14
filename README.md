@@ -14,7 +14,7 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
 
     - [2.1- filtering-data.sql]()
     - [2.2- alias-concat.sql]()
-    - [2.3-joining-clause.sql]()
+    - [2.3- joining-clause.sql]()
 
 3. **Database Design**
 
