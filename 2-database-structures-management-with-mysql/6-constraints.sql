@@ -1,6 +1,9 @@
 -- Active: 1731438237227@@127.0.0.1@3306@little_lemon
+--------------------------------------------------
+-- constraints
+--------------------------------------------------
 
-DROP Little_Lemon;
+DROP DATABASE Little_Lemon;
 
 -- Create new database
 CREATE DATABASE Little_Lemon;
@@ -19,7 +22,7 @@ SHOW COLUMNS FROM customers;
 
 -- Referential integrity constraints
 CREATE TABLE Bookings(
-    BookingID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- this is called key contraints
+    BookingID INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- this is called key constraints
     BookingDate DATE NOT NULL,
     TableNumber INT NOT NULL,
     NumberOfGuests INT NOT NULL CHECK(NumberOfGuests <= 8), -- check is domain constraints
