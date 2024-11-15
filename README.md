@@ -17,6 +17,7 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
     - [2.3- joining-clause.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/3-joining-clause.sql)
     - [2.4- grouping-data.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/4-grouping-data.sql)
     - [2.5- updating-Inserting-data.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/5-updating-Inserting-data.sql)
+    - [2.6- constraints.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/6-constraints.sql)
 
 3. **Database Design**
 
@@ -49,5 +50,5 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/username/repo_name.git
+    git clone https://github.com/prantomollick/mysql-dbms-projects
     ```
