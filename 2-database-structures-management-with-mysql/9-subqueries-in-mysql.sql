@@ -59,3 +59,74 @@ SELECT * FROM employees;
 --implementation sub query;
 SELECT * FROM employees WHERE `AnnualSalary` > (SELECT `AnnualSalary` FROM employees WHERE `Role` = 'Assistant Chef');
 
+-- Explain how subqueries interact with comparison operators
+-- Demonstrate the use of subqueries
+-- Demonstrate the use of subqueries with different comparison operators
+    -- SQL comparison operators
+        -- ANY operator
+        -- ALL operator
+        -- SOME operator
+
+
+
+SELECT * FROM employees;
+
+SELECT * FROM employees
+WHERE `AnnualSalary` <= ALL (
+    SELECT `AnnualSalary` FROM employees 
+    WHERE `Role` 
+    IN('Manager', 'Assistant Manager', 'Head Chef', 'Head Waiter')
+);
+
+SELECT * FROM employees
+WHERE `AnnualSalary` <= ALL (
+    SELECT `AnnualSalary` FROM employees 
+    WHERE `Role` 
+    IN('Manager', 'Assistant Manager', 'Head Chef', 'Head Waiter')
+);
+
+SELECT * FROM employees
+WHERE `AnnualSalary` >= ANY (
+    SELECT `AnnualSalary` FROM employees 
+    WHERE `Role` 
+    IN('Manager', 'Assistant Manager', 'Head Chef', 'Head Waiter')
+);
+
+SELECT * FROM employees
+WHERE `AnnualSalary` >= SOME (
+    SELECT `AnnualSalary` FROM employees 
+    WHERE `Role` 
+    IN('Manager', 'Assistant Manager', 'Head Chef', 'Head Waiter')
+);
+
+
+CREATE TABLE Bookings (
+    BookingID INT AUTO_INCREMENT PRIMARY KEY,
+    TableNo INT NOT NULL,
+    GuestFirstName VARCHAR(50) NOT NULL,
+    GuestLastName VARCHAR(50) NOT NULL,
+    BookingSlot TIME NOT NULL,
+    EmployeeID INT NOT NULL
+);
+
+
+INSERT INTO Bookings (TableNo, GuestFirstName, GuestLastName, BookingSlot, EmployeeID) VALUES
+(12, 'Anna', 'Iversen', '19:00:00', 1),
+(12, 'Joakim', 'Iversen', '19:00:00', 1),
+(19, 'Vanessa', 'McCarthy', '15:00:00', 3),
+(15, 'Marcos', 'Romero', '17:30:00', 4),
+(5, 'Hiroki', 'Yamane', '18:30:00', 2),
+(8, 'Diana', 'Pinto', '20:00:00', 5);
+
+
+SELECT * FROM bookings;
+
+SELECT * FROM employees WHERE EXISTS
+(SELECT * FROM bookings WHERE bookings.`EmployeeID` = employees.`EmployeeID` AND
+ `Role` IN("Head Chef", 'Head Waiter'));
+
+SELECT * FROM employees WHERE NOT EXISTS
+(SELECT * FROM bookings WHERE bookings.`EmployeeID` = employees.`EmployeeID` AND
+ `Role` IN("Head Chef", 'Head Waiter'));
+
+
