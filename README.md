@@ -20,6 +20,9 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
     - [2.6- constraints.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/6-constraints.sql)
     - [2.7- changing-table-structure.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/7-changing-table-structure.sql)
     - [2.8- copy-table.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/8-copy-table.sql)
+    - [2.10-virtual-tables.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/10-virtual-tables.sql)
+    - [2.11-numeric-functions.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/11-numeric-functions.sql)
+    - [12-string-functions.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/12-string-functions.sql)
 
 3. **Database Design**
 
