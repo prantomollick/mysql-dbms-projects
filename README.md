@@ -26,6 +26,7 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
     - [2.13-date-functions.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/13-date-functions.sql)
     - [2.14-comparison-functions.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/14-comparison-functions.sql)
     - [2.15-control-flow-functions.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/15-control-flow-functions.sql)
+    - [2.16-stored-procedures-in-mysql.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/16-stored-procedures-in-mysql.sql)
 
 3. **Database Design**
 
