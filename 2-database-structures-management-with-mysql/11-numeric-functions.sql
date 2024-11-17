@@ -32,8 +32,10 @@
 -- Math functions
 -- ABS
 
--- Create databases
+-- Drop Database
 DROP DATABASE mAndG;
+
+-- Create database
 CREATE DATABASE mAndG;
 
 -- Use database `m`

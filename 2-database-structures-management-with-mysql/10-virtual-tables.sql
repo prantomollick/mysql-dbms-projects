@@ -27,9 +27,10 @@
 -- Q: Pranto need to identiy their top 3 best-selling products with the use of a virtual table or view 
 -- to make sure they have enough quantity in stock for the next few months
 
--- Step 1: Create a new database
+-- Drop Database;
 DROP DATABASE GardenStore;
 
+-- Step 1: Create a new database
 CREATE DATABASE GardenStore;
 
 -- Step 2: Use the new database
