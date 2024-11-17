@@ -28,9 +28,9 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
     - [2.15-control-flow-functions.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/15-control-flow-functions.sql)
     - [2.16-stored-procedures-in-mysql.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/2-database-structures-management-with-mysql/16-stored-procedures-in-mysql.sql)
 
-3. **Database Design**
+3. **ADVANCED MYSQL Topics **
 
-    - [2.1 Table Creation](link_to_file)
+    - [3.1-functions-and-stored-procedures-in-mysql.sql](link_to_file)
     - [2.2 Defining Relationships](link_to_file)
     - [2.3 Indexing Basics](link_to_file)
 
