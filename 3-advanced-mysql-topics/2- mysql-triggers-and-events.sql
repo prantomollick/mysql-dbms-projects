@@ -1,6 +1,6 @@
 -- Active: 1731438237227@@127.0.0.1@3306@ordersdb
 --------------------------------------------------
---  MySQL Triggers and events 
+--  Triggers and events in MySQL
 --------------------------------------------------
 
 -- Trigger

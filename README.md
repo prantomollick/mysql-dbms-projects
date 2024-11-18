@@ -32,6 +32,8 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
 
     - [3.1-functions-and-stored-procedures-in-mysql.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/3-advanced-mysql-topics/1-functions-and-stored-procedures-in-mysql.sql)
     - [3.2-mysql-triggers.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/3-advanced-mysql-topics/2-mysql-triggers.sql)
+    - [3.3-optimizing-database-queries.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/3-optimizing-database-queries.sql)
+    - [4-further-optimization-techniques.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/4-further-optimization-techniques.sql)
 
 4. **Advanced SQL**
 
