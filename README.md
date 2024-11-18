@@ -30,9 +30,8 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
 
 3. **ADVANCED MYSQL Topics **
 
-    - [3.1-functions-and-stored-procedures-in-mysql.sql](link_to_file)
-    - [2.2 Defining Relationships](link_to_file)
-    - [2.3 Indexing Basics](link_to_file)
+    - [3.1-functions-and-stored-procedures-in-mysql.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/3-advanced-mysql-topics/1-functions-and-stored-procedures-in-mysql.sql)
+    - [3.2-mysql-triggers.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/3-advanced-mysql-topics/2-mysql-triggers.sql)
 
 4. **Advanced SQL**
 
