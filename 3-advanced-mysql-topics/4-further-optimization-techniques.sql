@@ -81,3 +81,20 @@ UNION
 SELECT * FROM `Average_Sales_2021`
 UNION
 SELECT * FROM `Average_Sales_2022`;
+
+-- prepared statement
+SELECT * FROM orders;
+
+PREPARE GetOrderStatement FROM 'SELECT ClientID, ProductID, Quantity, Cost From Orders WHERE OrderID = ?';
+SET @order_id = 10;
+
+EXECUTE GetOrderStatement USING @order_id;
+
+CREATE TABLE Activity(ActivityID INT PRIMARY KEY, Properties JSON);
+
+INSERT INTO activity(`ActivityID`, `Properties`) VALUES
+(1, '{"ClientID": "Cl1", "ProductID": "P1", "Order": "True"}'),
+(2, '{"ClientID": "Cl2", "ProductID": "P4", "Order": "False"}'),
+(3, '{"ClientID": "Cl5", "ProductID": "P5", "Order": "True"}');
+
+SELECT `ActivityID`, `Properties`->'$.ClientID', Properties->'$.ProductID', Properties->'$.Order' FROM Activity;
