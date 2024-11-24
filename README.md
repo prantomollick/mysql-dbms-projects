@@ -38,9 +38,7 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
 
 4. **4-python-testing-tools**
 
-    - [4.0 Unit test and pytest](link_to_file)
-    - [4.1 TDD](link_to_file)
-    - [4.2 Views and Stored Procedures](link_to_file)
+    - [4.0 Unit test and pytest](https://github.com/prantomollick/mysql-dbms-projects/tree/main/4-python-testing-tools)
 
 5. **Practice Projects**
 
