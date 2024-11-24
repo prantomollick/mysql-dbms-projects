@@ -36,11 +36,11 @@ Welcome to my SQL Practice + Projects Repository! This repository contains a var
     - [3.4-further-optimization-techniques.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/4-further-optimization-techniques.sql)
     - [3.5-evaluating-MySQL-for-data-analysis.sql](https://github.com/prantomollick/mysql-dbms-projects/blob/main/5-evaluating-MySQL-for-data-analysis.sql)
 
-4. **Advanced SQL**
+4. **4-python-testing-tools**
 
-    - [3.1 Subqueries and Joins](link_to_file)
-    - [3.2 Common Table Expressions (CTEs)](link_to_file)
-    - [3.3 Views and Stored Procedures](link_to_file)
+    - [4.0 Unit test and pytest](link_to_file)
+    - [4.1 TDD](link_to_file)
+    - [4.2 Views and Stored Procedures](link_to_file)
 
 5. **Practice Projects**
 

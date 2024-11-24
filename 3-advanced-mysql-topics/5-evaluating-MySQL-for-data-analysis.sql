@@ -157,3 +157,6 @@ products.`NumberOfItems` as "Items in Stock" FROM
 clients INNER JOIN orders INNER JOIN products
 ON(clients.ClientID = orders.`ClientID` AND orders.`ProductID` = products.`ProductID`)
 WHERE (orders.`Quantity` >= 10 AND DATE > '2020-09-05' AND products.`NumberOfItems` >= 50);
+
+
+select * from clients;
